@@ -8,7 +8,6 @@ void main() {
 }
 
 class LoginUiApp extends StatelessWidget {
-
   Color _primaryColor = HexColor('#DC54FE');
   Color _accentColor = HexColor('#8A02AE');
 
@@ -31,13 +30,11 @@ class LoginUiApp extends StatelessWidget {
       title: 'Flutter Login UI',
       theme: ThemeData(
         primaryColor: _primaryColor,
-        accentColor: _accentColor,
         scaffoldBackgroundColor: Colors.grey.shade100,
-        primarySwatch: Colors.grey,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.grey)
+            .copyWith(secondary: _accentColor),
       ),
       home: SplashScreen(title: 'Flutter Login UI'),
     );
   }
 }
-
-
